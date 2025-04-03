@@ -87,7 +87,7 @@ Add delays between commands for stability after the endpoint from a previous com
 
 ````bash
 ```bash docci-output-contains="GOOD" docci-wait-for-endpoint=http://localhost:3000|30
-echo "Health: `curl http://localhost:3000/health`"
+curl http://localhost:3000/health
 ```
 ````
 
@@ -196,5 +196,4 @@ Control how your documentation code blocks are executed with no code, just code 
 
 ## 🚧 Limitations
 
-- Not yet tested on Windows WSL, but should work.
 - Multi-line commands in docs are not supported yet

@@ -14,8 +14,22 @@ echo xyzMyOutput
 echo abcMyOutput
 ```
 
+```bash docci-output-contains="testingPipedData"
+echo "testingPipedData" | echo "$(cat)"
+```
+
+```bash docci-output-contains="Valid Output"
+printf 'Valid Output'
+```
+
+```bash docci-output-contains="Valid Output2"
+echo 'Valid Output2'
+```
+
+```bash docci-output-contains="TestInputEcho"
+read -r input_variable <<< "TestInputEcho"; echo "$input_variable"
+```
+
 ```bash docci-assert-failure docci-output-contains="NOT THE RIGHT OUTPUT"
 echo abcMyOutput
 ```
-
-
